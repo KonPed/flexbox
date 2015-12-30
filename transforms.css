@@ -1,0 +1,26 @@
+
+body {
+  perspective: 800px;
+}
+
+.wrap {
+  background-color: #ccc;
+}
+
+.wrap div {
+  transition: transform .5s ease-in, opacity .6s ease-in;
+  position: absolute;
+  transform: rotateX(90deg);
+  opacity: 0;
+  transform-origin: bottom;
+}
+
+.wrap:hover div {
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+
+/*.wrap:hover {
+  transform: rotateX(104deg);
+  opacity: 0;
+}*/
