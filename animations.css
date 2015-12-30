@@ -1,3 +1,25 @@
 /* Animations */
 
+.boat {
+  animation: rock-boat 3s ease-in-out infinite;
+}
+
+.boat::before {
+  animation: steam 4s 2s infinite;
+}
+
 /* Keyframes */
+
+@keyframes rock-boat {
+  50% {transform: rotate3d(0,0,1,-5deg) translate3d(0, -10px, 0);}
+}
+
+@-webkit-keyframes rock-boat {
+  50% {transform: rotate3d(0,0,1,-5deg) translate3d(0, -10px, 0);}
+}
+
+@keyframes steam {
+  40%,
+  60% {opacity: 1;}
+  100% {transform: translate3d(-15%, -35%, 0) rotate3d(0, 0, 1, 20deg);}
+}
