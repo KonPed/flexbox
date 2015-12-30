@@ -4,18 +4,19 @@ body {
 }
 
 .wrap {
-  background-color: #ccc;
+  transform-style: preserve-3d;
+  transition: transform .6s ease-in;
 }
 
 .wrap div {
-  transition: transform .5s ease-in, opacity .6s ease-in;
   position: absolute;
-  transform: rotateX(90deg);
-  opacity: 0;
-  transform-origin: bottom;
+  backface-visibility: hidden;
 }
 
-.wrap:hover div {
-  transform: rotateX(0deg) translateZ(15px);
-  opacity: 1;
+.side-b {
+  transform: rotateY(180deg);
+}
+
+.wrap:hover {
+  transform: rotateY(180deg);
 }
