@@ -16,11 +16,6 @@ body {
 }
 
 .wrap:hover div {
-  transform: rotateX(0deg);
+  transform: rotateX(0deg) translateZ(15px);
   opacity: 1;
 }
-
-/*.wrap:hover {
-  transform: rotateX(104deg);
-  opacity: 0;
-}*/
