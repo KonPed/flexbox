@@ -1,11 +1,20 @@
 /* Animations */
 
+body {
+  animation: bg-move 8s ease-out forwards;
+}
+
 .boat {
   animation: rock-boat 3s ease-in-out infinite;
 }
 
 .boat::before {
   animation: steam 4s 2s infinite;
+}
+
+.mike {
+  animation: mike-move 6s 6s ease-out forwards,
+  mike-float 3.2s infinite;
 }
 
 /* Keyframes */
@@ -22,4 +31,37 @@
   40%,
   60% {opacity: 1;}
   100% {transform: translate3d(-15%, -35%, 0) rotate3d(0, 0, 1, 20deg);}
+}
+
+@-webkit-keyframes steam {
+  40%,
+  60% {opacity: 1;}
+  100% {transform: translate3d(-15%, -35%, 0) rotate3d(0, 0, 1, 20deg);}
+}
+
+@keyframes bg-move {
+  0% {background-position: 0px -560px;}
+  100% {background-position: -3500px -460px;}
+}
+
+@-webkit-keyframes bg-move {
+  0% {background-position: 0px -560px;}
+  100% {background-position: -3500px -460px;}
+}
+
+@keyframes mike-move {
+  0% {left: -19%;}
+  50% {left: 0%;}
+  70% {left: 5%;}
+  100% {left: 12%;}
+}
+
+@-webkit-keyframes mike-move {
+  0% {left: 8%;}
+  50% {left: 12%;}
+  100% {left: 12%;}
+}
+
+@keyframes mike-float {
+  50% {transform: rotate3d(0, 0, 1, 5deg) translate3d(0, -5px, 0);}
 }

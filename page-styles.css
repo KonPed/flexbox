@@ -3,7 +3,7 @@ body {
 	background-image: url("island.png");
 	background-repeat: repeat-x;
 	background-size: 780px;
-	background-position: -460px -460px;
+	background-position: 0px -460px;
 }
 
 .boat {
